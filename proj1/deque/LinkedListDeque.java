@@ -37,15 +37,6 @@ public class LinkedListDeque<T> implements Deque<T> {
     }
 
     @Override
-    public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
     public int size() {
         return size;
     }
@@ -86,7 +77,7 @@ public class LinkedListDeque<T> implements Deque<T> {
             return null;
         }
         Node current = sentinel.next;
-        for (int i = 0; i <= index; i++) {
+        for (int i = 1; i <= index; i++) {
             current = current.next;
         }
         return current.item;
